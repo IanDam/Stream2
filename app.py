@@ -30,6 +30,11 @@ st.image("./2/des5.png")
 st.image("./2/des6.png")
 st.image("./2/des7.png")
 
+st.image("./2/heat1.png")
+st.image("./2/shap1.png")
+st.image("./2/shap2.png")
+st.image("./2/shap3.png")
+
 st.write("[link](https://colab.research.google.com/drive/1zZ88UcZAV6uldqx_kTjnwlyhT6iktB09#scrollTo=8KNX78rFum6r) entrenamiento modelo")
 st.subheader("Prediccion")
 

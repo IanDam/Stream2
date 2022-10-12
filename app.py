@@ -40,54 +40,30 @@ st.subheader("Prediccion")
 
 
 nombre = st.text_input('Nombre completo')
-Customer_Age =st.text_input('Edad')
-Gender = st.text_input('Genero')
+Customer_Age =st.number_input('Edad')
+Gender = st.selectbox('Genero:',('Masculino','Femenino'))
 
-Gender = 1 if Gender == 'Maculino' else 0
+Gender = 1 if Gender == 'Masculino' else 0
 
-dependent = st.text_input('Número de personas a cargo')
-Education_Level = st.text_input('Nivel educativo')
+Education_Level = st.number_input('Nivel educativo:(Si es ineducado ingrese 0, si es secundaria ingrese 1, si es universitario ingrese 2, si es graduado ingrese 3, si es postgrado ingrese 4 y si es doctorado ingrese 5, si es desconocido ingrese 6)')
 
-if education_level == "uneducated": 
-        education_level = 0 
-
-if education_level == "High School": 
-        education_level = 1 
-
-if education_level == "College": 
-        education_level = 2 
-
-if education_level == "Graduate": 
-        education_level = 3
-       
-if education_level == "Post-Graduate": 
-        education_level = 4 
-
-if education_level == "Doctorate": 
-        education_level = 5
-       
-if education_level == "Doctorate": 
-        education_level = 6
-
-Marital_Status = st.text_input('Estado civil')
+Marital_Status = st.selectbox('Estado Civil:',('Casado','Soltero'))
 
 Marital_Status = 1 if Marital_Status == 'Casado' else 0
 
-Income_Category= st.text_input('Categoría de ingresos ')
-card = st.text_input('Tipo de tarjeta')
-Months_on_book = st.text_input('Duración de la relación con el banco')
-Total_Relationship_Count = st.text_input('Número total de productos')
-Months_Inactive_12_mon= st.text_input('Número de meses de inactividad')
-cc = st.text_input('Número de contactos')
-Credit_Limit = st.text_input('Límite de crédito')
-Total_Revolving_Bal = st.text_input('Saldo rotativo total')
-Avg_Open_To_Buy = st.text_input('Línea de crédito abierta a la compra (media de los últimos 12 meses)')
-Total_Amt_Chng_Q4_Q1 = st.text_input('Variación del importe de las transacciones(cuarto trimestre sobre primer trimestre)')
-Total_Trans_Amt = st.text_input('Cantidad total de las transacciones(12 meses)')
-Total_Trans_Ct = st.text_input('Recuento de transacciones')
-Total_Ct_Chng_Q4_Q1 = st.text_input('Cambio en el recuento de transacciones')
-Avg_Utilization_Ratio =  st.text_input('Utilización promedio de la tarjeta')
-
+Income_Category= st.number_input('Categoría de ingresos:(Si es desconocido ingrese 0, si es menor a $40K ingrese 1, si está entre $40K - $60K ingrese 2,si está entre $60K - $80K ingrese 3, si está entre $80K - $120K ingrese 4, si es $120K o mayor ingrese 5)')
+Card_Category = st.number_input('Tipo de tarjeta(Si es Azul ingrese 0, nsi es dorada ingrese 1, si es plata ingrese 2 y si es platino ingrese 3)')
+Months_on_book = st.number_input('Duración de la relación con el banco')
+Total_Relationship_Count = st.number_input('Número total de productos')
+Months_Inactive_12_mon= st.number_input('Número de meses de inactividad')
+Credit_Limit = st.number_input('Límite de crédito')
+Total_Revolving_Bal = st.number_input('Saldo rotativo total')
+Avg_Open_To_Buy = st.number_input('Línea de crédito abierta a la compra (media de los últimos 12 meses)')
+Total_Amt_Chng_Q4_Q1 = st.number_input('Variación del importe de las transacciones(cuarto trimestre sobre primer trimestre)')
+Total_Trans_Amt = st.number_input('Cantidad total de las transacciones(12 meses)')
+Total_Trans_Ct = st.number_input('Recuento de transacciones')
+Total_Ct_Chng_Q4_Q1 = st.number_input('Cambio en el recuento de transacciones')
+Avg_Utilization_Ratio =  st.number_input('Utilización promedio de la tarjeta')
 
 st.subheader("""Modelo """)
 

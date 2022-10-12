@@ -105,16 +105,16 @@ resultado = 'Existing customer 'if prediction ==1 else 'Attrited Customer'
 
 
 
-clsr = DecisionTreeClassifier(max_depth=10)
-clsr.fit(X_train, y_train)
+#clsr = DecisionTreeClassifier(max_depth=10)
+#clsr.fit(X_train, y_train)
 
-y_pred = clsr.predict(X_test)
-y_fit_train = clsr.predict(Attrition Flag)
+#y_pred = clsr.predict(X_test)
+#y_fit_train = clsr.predict(Attrition Flag)
 
 
-clsr_pickle = open('clsr_randomforest.pickle','rb')
+#clsr_pickle = open('clsr_randomforest.pickle','rb')
 
-clsr = pkl.load(clsr_pickle)
+#clsr = pkl.load(clsr_pickle)
 
-print(clsr)
+#print(clsr)
 

@@ -38,6 +38,10 @@ st.image("./2/shap3.png")
 st.write("[link](https://colab.research.google.com/drive/1unQpfTfqtcD1Ns9mFfYkIAwlN9drONfM#scrollTo=8KNX78rFum6r) entrenamiento modelo")
 st.subheader("Prediccion")
 
+
+
+
+
 nombre = st.text_input('Nombre completo')
 Customer_Age =st.text_input('Edad')
 Gender = st.text_input('Genero')
@@ -46,6 +50,9 @@ Gender = 1 if Gender == 'Maculino' else 0
 
 dependent = st.text_input('Número de personas a cargo')
 Education_Level = st.text_input('Nivel educativo')
+
+if education_level == "uneducated": 
+        education_level = 0 
 
 Education_Level = 0 if Education_Level='Uneducated'
 Education_Level = 1 if Education_Level=='High School'
@@ -91,3 +98,11 @@ prediction = clsr.predict(
 
 resultado = 'Existing customer 'if prediction ==1 else 'Attrited Customer'
       return resultado
+
+
+
+clsr = DecisionTreeClassifier(max_depth=10)
+clsr.fit(X_train, y_train)
+
+y_pred = clsr.predict(X_test)
+y_fit_train = clsr.predict(Attrition Flag)

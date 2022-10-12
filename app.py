@@ -39,20 +39,20 @@ st.write("[link](https://colab.research.google.com/drive/1unQpfTfqtcD1Ns9mFfYkIA
 st.subheader("Prediccion")
 
 
-nombre = st.text_input('Nombre completo')
-Customer_Age =st.number_input('Edad')
+nombre = st.text_input('Ingrese su Nombre completo')
+Customer_Age =st.number_input('Ingrese su Edad')
 Gender = st.selectbox('Genero:',('Masculino','Femenino'))
 
 Gender = 1 if Gender == 'Masculino' else 0
 
-Education_Level = st.number_input('Nivel educativo:(Si es ineducado ingrese 0, si es secundaria ingrese 1, si es universitario ingrese 2, si es graduado ingrese 3, si es postgrado ingrese 4 y si es doctorado ingrese 5, si es desconocido ingrese 6)')
+Education_Level = st.number_input('Ingrese su nivel educativo:(Si este es  ingrese 0, si este es secundaria ingrese 1, si este es universitario ingrese 2, si usted es graduado ingrese 3, si tiene un postgrado ingrese 4 y si tiene un doctorado ingrese 5, si se desconoce ingrese 6)')
 
 Marital_Status = st.selectbox('Estado Civil:',('Casado','Soltero'))
 
 Marital_Status = 1 if Marital_Status == 'Casado' else 0
 
-Income_Category= st.number_input('Categoría de ingresos:(Si es desconocido ingrese 0, si es menor a $40K ingrese 1, si está entre $40K - $60K ingrese 2,si está entre $60K - $80K ingrese 3, si está entre $80K - $120K ingrese 4, si es $120K o mayor ingrese 5)')
-Card_Category = st.number_input('Tipo de tarjeta(Si es Azul ingrese 0, nsi es dorada ingrese 1, si es plata ingrese 2 y si es platino ingrese 3)')
+Income_Category= st.number_input('Categoría de ingresos:(Si se desconoce ingrese 0, si es menor a $40K ingrese 1, si se encuentra entre $40K - $60K ingrese 2,si se encunetra entre $60K - $80K ingrese 3, si se encunetra entre $80K - $120K ingrese 4, si es de $120K o mayor ingrese 5)')
+Card_Category = st.number_input('Tipo de tarjeta(Si es Azul ingrese 0, si es dorada ingrese 1, si es plata ingrese 2 y si es platino ingrese 3)')
 Months_on_book = st.number_input('Duración de la relación con el banco')
 Total_Relationship_Count = st.number_input('Número total de productos')
 Months_Inactive_12_mon= st.number_input('Número de meses de inactividad')
@@ -67,7 +67,7 @@ Avg_Utilization_Ratio =  st.number_input('Utilización promedio de la tarjeta')
 
 st.subheader("""Modelo """)
 
-clsr_pickle = open('clsr_randomforest.pickle','rb')
+clsr_pickle = open('clsr_proyecto8.pickle','rb')
 clsr = pkl.load(clsr_pickle)
 clsr_pickle.close()
 

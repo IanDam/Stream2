@@ -77,7 +77,7 @@ Credit_Limit,Total_Revolving_Bal,Avg_Open_To_Buy,Total_Amt_Chng_Q4_Q1,Total_Tran
 prediction = clsr.predict([np.array(datos).reshape(1,-1)][0])[0]
 
 resultado = 'Existing customer' if prediction ==1 else 'Attrited Customer'
-print(resultado)
+st.write('resultado')
 
 
 

@@ -39,7 +39,6 @@ st.write("[link](https://colab.research.google.com/drive/1unQpfTfqtcD1Ns9mFfYkIA
 st.subheader("Prediccion")
 
 
-
 nombre = st.text_input('Nombre completo')
 Customer_Age =st.text_input('Edad')
 Gender = st.text_input('Genero')

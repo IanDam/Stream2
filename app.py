@@ -38,37 +38,56 @@ st.image("./2/shap3.png")
 st.write("[link](https://colab.research.google.com/drive/1unQpfTfqtcD1Ns9mFfYkIAwlN9drONfM#scrollTo=8KNX78rFum6r) entrenamiento modelo")
 st.subheader("Prediccion")
 
+nombre = st.text_input('Nombre completo')
+Customer_Age =st.text_input('Edad')
+Gender = st.text_input('Genero')
+
+Gender = 1 if Gender == 'Maculino' else 0
+
+dependent = st.text_input('Número de personas a cargo')
+Education_Level = st.text_input('Nivel educativo')
+
+Education_Level = 0 if Education_Level=='Uneducated'
+Education_Level = 1 if Education_Level=='High School'
+Education_Level = 2 if Education_Level=='College'
+Education_Level = 3 if Education_Level=='Graduate'
+Education_Level = 4 if Education_Level=='Post-Graduate'
+Education_Level = 5 if Education_Level=='Doctorate'
+Education_Level = 5 if Education_Level=='Unknown'
+
+,'High School':1, 'College':2,'Graduate':3,'Post-Graduate':4, 'Doctorate':5,'Unknown':6}
+
+Marital_Status = st.text_input('Estado civil')
+
+Marital_Status = 1 if Marital_Status == 'Casado' else 0
+
+Income_Category= st.text_input('Categoría de ingresos ')
+card = st.text_input('Tipo de tarjeta')
+Months_on_book = st.text_input('Duración de la relación con el banco')
+Total_Relationship_Count = st.text_input('Número total de productos')
+Months_Inactive_12_mon= st.text_input('Número de meses de inactividad')
+cc = st.text_input('Número de contactos')
+Credit_Limit = st.text_input('Límite de crédito')
+Total_Revolving_Bal = st.text_input('Saldo rotativo total')
+Avg_Open_To_Buy = st.text_input('Línea de crédito abierta a la compra (media de los últimos 12 meses)')
+Total_Amt_Chng_Q4_Q1 = st.text_input('Variación del importe de las transacciones(cuarto trimestre sobre primer trimestre)')
+Total_Trans_Amt = st.text_input('Cantidad total de las transacciones(12 meses)')
+Total_Trans_Ct = st.text_input('Recuento de transacciones')
+Total_Ct_Chng_Q4_Q1 = st.text_input('Cambio en el recuento de transacciones')
+Avg_Utilization_Ratio =  st.text_input('Utilización promedio de la tarjeta')
 
 
-gender = st.selectbox(
-    '¿Cual es su genero?',
-    ('1. Hombre', '2. Mujer'))
-
-
-
-
-Marital_Status = st.selectbox(
-    '¿Estado civil?',
-    ('0. soltero', '1. casado', "0. divorciado","desconocido"))
-Marital_Status = st.number_input(
-    '¿Estado civil?')
-Marital_Status = st.number_input(
-    '¿Estado civil?')
-Marital_Status = st.number_input(
-    '¿Estado civil?')
-Marital_Status = st.number_input(
-    '¿Estado civil?')
-Marital_Status = st.number_input(
-    '¿Estado civil?')
+st.subheader("""Modelo """)
 
 clsr_pickle = open('clsr_randomforest.pickle','rb')
 clsr = pkl.load(clsr_pickle)
 clsr_pickle.close()
 
 prediction = clsr.predict( 
-        [[Gender,Marital_Status,Customer_Age,Education_Level,Months_on_book,Income_Category,Total_Relationship_Count,Months_Inactive_12_mon, Credit_Limit,Total_Revolving_Bal,Avg_Open_To_Buy,Total_Amt_Chng_Q4_Q1,Total_Trans_Amt,Total_Trans_Ct,Total_Ct_Chng_Q4_Q1,Avg_Utilization_Ratio]]) 
-print(prediction) 
+        [['Gender','Marital_Status','Customer_Age','Education_Level','Months_on_book','Income_Category','Total_Relationship_Count','Months_Inactive_12_mon',
+'Credit_Limit','Total_Revolving_Bal','Avg_Open_To_Buy','Total_Amt_Chng_Q4_Q1','Total_Trans_Amt','Total_Trans_Ct','Total_Ct_Chng_Q4_Q1','Avg_Utilization_Ratio']]) 
+    print(prediction) 
     
 
-resultado = 'Existing customer' if prediction ==1 else 'Attrited Customer'
-st.write(resultado)
+resultado = 'Existing customer 'if prediction ==1 else 'Attrited Customer'
+      return resultado

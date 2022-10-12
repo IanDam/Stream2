@@ -43,7 +43,7 @@ st.write("[link](https://colab.research.google.com/drive/1unQpfTfqtcD1Ns9mFfYkIA
 st.subheader("Prediccion")
 
 
-nombre = st.text_input('Ingrese su Nombre completo')
+
 Customer_Age =st.number_input('Ingrese su Edad')
 Gender = st.selectbox('Genero:',('Masculino','Femenino'))
 

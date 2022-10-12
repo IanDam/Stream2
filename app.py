@@ -37,3 +37,5 @@ gender = st.selectbox(
 Marital_Status = st.selectbox(
     '¿Estado civil?',
     ('1. Hombre', '2. Mujer'))
+Marital_Status = st.number_input(
+    '¿Estado civil?')

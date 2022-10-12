@@ -92,5 +92,5 @@ print(resultado)
 
 #clsr = pkl.load(clsr_pickle)
 
-#print(clsr)
+#print(clsr
 

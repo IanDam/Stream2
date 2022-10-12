@@ -38,7 +38,11 @@ st.image("./2/shap3.png")
 st.write("[link](https://colab.research.google.com/drive/1unQpfTfqtcD1Ns9mFfYkIAwlN9drONfM#scrollTo=8KNX78rFum6r) entrenamiento modelo")
 st.subheader("Prediccion")
 
+clsr_pickle = open('clsr_randomforest.pickle','rb')
 
+clsr = pkl.load(clsr_pickle)
+
+print(clsr)
 
 
 
@@ -71,13 +75,7 @@ if education_level == "Doctorate":
        
 if education_level == "Doctorate": 
         education_level = 6
-#education_level ==0 if education_level='Uneducated'
-#education_level == 1 if education_level=='High School'
-#education_level == 2 if education_level=='College'
-#education_level == 3 if education_level=='Graduate'
-#education_level == 4 if education_level=='Post-Graduate'
-#education_level == 5 if education_level=='Doctorate'
-#education_level == 6 if education_level=='Unknown'
+
 
 ,'High School':1, 'College':2,'Graduate':3,'Post-Graduate':4, 'Doctorate':5,'Unknown':6}
 

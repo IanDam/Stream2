@@ -69,7 +69,7 @@ st.subheader("""Modelo """)
 
 clsr_pickle8 = open('clsr_proyecto8.pickle','rb')
 clsr = pkl.load(clsr_pickle8)
-
+print(clsr)
 
 
 prediction = clsr.predict([np.array([Gender,Marital_Status,Customer_Age,Education_Level,Months_on_book,Income_Category,Total_Relationship_Count,Months_Inactive_12_mon,

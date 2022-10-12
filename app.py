@@ -35,7 +35,7 @@ st.image("./2/shap1.png")
 st.image("./2/shap2.png")
 st.image("./2/shap3.png")
 
-st.write("[link](https://colab.research.google.com/drive/1zZ88UcZAV6uldqx_kTjnwlyhT6iktB09#scrollTo=8KNX78rFum6r) entrenamiento modelo")
+st.write("[link](https://colab.research.google.com/drive/1unQpfTfqtcD1Ns9mFfYkIAwlN9drONfM#scrollTo=8KNX78rFum6r) entrenamiento modelo")
 st.subheader("Prediccion")
 
 

@@ -67,7 +67,7 @@ Avg_Utilization_Ratio =  st.number_input('Utilización promedio de la tarjeta')
 
 st.subheader("""Modelo """)
 
-clsr_pickle = open('clsr_proyecto8.pickle','rb')
+clsr_pickle = open('clsr_proyecto8','rb')
 clsr = pkl.load(clsr_pickle)
 clsr_pickle.close()
 

@@ -1,6 +1,8 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
+import pickle as pkl
+
 df = pd.read_csv("https://raw.githubusercontent.com/labeconometria/MLxE/main/proyectos1er/dataset_2.csv")
 
 st.title("Proyecto 8")
@@ -31,9 +33,15 @@ st.image("./2/des7.png")
 st.write("[link](https://colab.research.google.com/drive/1zZ88UcZAV6uldqx_kTjnwlyhT6iktB09#scrollTo=8KNX78rFum6r) entrenamiento modelo")
 st.subheader("Prediccion")
 
+
+
 gender = st.selectbox(
     '¿Cual es su genero?',
     ('1. Hombre', '2. Mujer'))
+
+
+
+
 Marital_Status = st.selectbox(
     '¿Estado civil?',
     ('0. soltero', '1. casado', "0. divorciado","desconocido"))
@@ -47,3 +55,4 @@ Marital_Status = st.number_input(
     '¿Estado civil?')
 Marital_Status = st.number_input(
     '¿Estado civil?')
+

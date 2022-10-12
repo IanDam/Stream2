@@ -54,17 +54,30 @@ Education_Level = st.text_input('Nivel educativo')
 if education_level == "uneducated": 
         education_level = 0 
 
-if education_level == "uneducated": 
-        education_level = 0 
-        
-        
-education_level ==0 if education_level='Uneducated'
-education_level == 1 if education_level=='High School'
-education_level == 2 if education_level=='College'
-education_level == 3 if education_level=='Graduate'
-education_level == 4 if education_level=='Post-Graduate'
-education_level == 5 if education_level=='Doctorate'
-education_level == 6 if education_level=='Unknown'
+if education_level == "High School": 
+        education_level = 1 
+
+if education_level == "College": 
+        education_level = 2 
+
+if education_level == "Graduate": 
+        education_level = 3
+       
+if education_level == "Post-Graduate": 
+        education_level = 4 
+
+if education_level == "Doctorate": 
+        education_level = 5
+       
+if education_level == "Doctorate": 
+        education_level = 6
+#education_level ==0 if education_level='Uneducated'
+#education_level == 1 if education_level=='High School'
+#education_level == 2 if education_level=='College'
+#education_level == 3 if education_level=='Graduate'
+#education_level == 4 if education_level=='Post-Graduate'
+#education_level == 5 if education_level=='Doctorate'
+#education_level == 6 if education_level=='Unknown'
 
 ,'High School':1, 'College':2,'Graduate':3,'Post-Graduate':4, 'Doctorate':5,'Unknown':6}
 

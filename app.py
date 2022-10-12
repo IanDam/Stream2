@@ -47,7 +47,7 @@ Gender = 1 if Gender == 'Maculino' else 0
 dependent = st.text_input('Número de personas a cargo')
 Education_Level = st.text_input('Nivel educativo')
 
-Education_Level = 0 if Education_Level=='Uneducated'
+Education_Level = 0 if Education_Level='Uneducated'
 Education_Level = 1 if Education_Level=='High School'
 Education_Level = 2 if Education_Level=='College'
 Education_Level = 3 if Education_Level=='Graduate'

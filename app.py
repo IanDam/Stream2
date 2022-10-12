@@ -29,3 +29,11 @@ st.image("./2/des6.png")
 st.image("./2/des7.png")
 
 st.write("[link](https://colab.research.google.com/drive/1zZ88UcZAV6uldqx_kTjnwlyhT6iktB09#scrollTo=8KNX78rFum6r) entrenamiento modelo")
+st.subheader("Prediccion")
+
+gender = st.selectbox(
+    '¿Cual es su genero?',
+    ('1. Hombre', '2. Mujer'))
+Marital_Status = st.selectbox(
+    '¿Estado civil?',
+    ('1. Hombre', '2. Mujer'))

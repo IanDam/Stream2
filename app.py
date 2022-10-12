@@ -67,9 +67,9 @@ Avg_Utilization_Ratio =  st.number_input('Utilización promedio de la tarjeta')
 
 st.subheader("""Modelo """)
 
-clsr_pickle = open('clsr_proyecto8.pickle','rb')
-clsr = pkl.load(clsr_pickle)
-clsr_pickle.close()
+clsr_pickle8 = open('clsr_proyecto8.pickle','rb')
+clsr = pkl.load(clsr_pickle8)
+
 
 prediction = clsr.predict([['Gender','Marital_Status','Customer_Age','Education_Level','Months_on_book','Income_Category','Total_Relationship_Count','Months_Inactive_12_mon',
 'Credit_Limit','Total_Revolving_Bal','Avg_Open_To_Buy','Total_Amt_Chng_Q4_Q1','Total_Trans_Amt','Total_Trans_Ct','Total_Ct_Chng_Q4_Q1','Avg_Utilization_Ratio']]) 
@@ -88,9 +88,11 @@ print(resultado)
 #y_fit_train = clsr.predict(Attrition Flag)
 
 
-#clsr_pickle = open('clsr_randomforest.pickle','rb')
+#clsr_pickle = open('clsr_proyecto8.pickle','rb')
 
-#clsr = pkl.load(clsr_pickle)
+#clsr = pkl.load(clsr_pickle8)
 
-#print(clsr
+#print(clsr)
+
+
 
